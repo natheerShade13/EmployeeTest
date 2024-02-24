@@ -55,4 +55,5 @@ class EmployeeTest {
         assertEquals(expectedToString1, employee1.toString());
         assertEquals(expectedToString2, employee2.toString());
     }
+
 }
