@@ -3,6 +3,11 @@ package za.ac.cput;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,7 +15,6 @@ class EmployeeTest {
 
     private Employee employee1;
     private Employee employee2;
-
     @BeforeEach
     void setUp() {
         // Initialize Employee objects
@@ -35,6 +39,19 @@ class EmployeeTest {
         Employee anotherEmployee = new Employee("E001", "Chadwin", "Fritz", 43000.0);
         assertEquals(employee1, anotherEmployee);
         assertNotEquals(employee1, employee2);
+    }
+@Test
+    void testObjectIdentity(){
+        Employee sameEmployee = employee1;
+        assertSame(sameEmployee,employee1);
+        assertNotSame(employee1,employee2);
+
+
+    }
+    @Test
+    @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
+    public void nonStopRunTime(){
+        //I don't know what to call here
     }
 
     @Test
