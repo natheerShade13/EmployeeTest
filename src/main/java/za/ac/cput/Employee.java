@@ -48,10 +48,7 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
-    public double increase(){
-        return this.salary += 5000;
-    }
+    
 
     @Override
     public String toString() {
