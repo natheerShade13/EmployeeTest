@@ -58,7 +58,7 @@ class EmployeeTest {
     }
     @Test
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
-    public void nonStopRunTimee(){
+    public void nonStopRunTime(){
         //I don't know what to call here.
     }
 
