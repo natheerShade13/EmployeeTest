@@ -1,5 +1,11 @@
 package za.ac.cput;
 
+/*
+Authors : Chadwin Kyle Fritz(218068360), Natheer Shade(217159109), Thabo Tshabalala(221715126)
+Date : 23/02/2024
+*/
+
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -52,8 +58,8 @@ class EmployeeTest {
     }
     @Test
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
-    public void nonStopRunTime(){
-        //I don't know what to call here
+    public void nonStopRunTimee(){
+        //I don't know what to call here.
     }
 
     @Test
