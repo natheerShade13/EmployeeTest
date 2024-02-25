@@ -64,17 +64,25 @@ public class Employee {
 
     @Override
     public boolean equals(Object o) {
+        // Check if the compared object is the same instance
         if (this == o) return true;
+    
+        // Check if the compared object is null or of a different class
         if (o == null || getClass() != o.getClass()) return false;
+    
+        // Cast the compared object to the same class
         Employee employee = (Employee) o;
+    
+        // Compare each field for equality
         return Double.compare(employee.salary, salary) == 0 &&
-                empNum.equals(employee.empNum) &&
-                name.equals(employee.name) &&
-                sName.equals(employee.sName);
+                Objects.equals(empNum, employee.empNum) &&
+                Objects.equals(name, employee.name) &&
+                Objects.equals(sName, employee.sName);
     }
-
+    
     @Override
     public int hashCode() {
+        // Generate a hash code based on the hash codes of individual fields
         return Objects.hash(empNum, name, sName, salary);
     }
 
