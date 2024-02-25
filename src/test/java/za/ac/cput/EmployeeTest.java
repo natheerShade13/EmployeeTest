@@ -15,11 +15,13 @@ class EmployeeTest {
 
     private Employee employee1;
     private Employee employee2;
+    private Employee employee3;
     @BeforeEach
     void setUp() {
         // Initialize Employee objects
         employee1 = new Employee("E001", "Chadwin", "Fritz", 43000.0);
         employee2 = new Employee("E002", "Natheer", "Shade", 44000.0);
+        employee3 = employee1;
     }
 
     @Test
@@ -56,8 +58,9 @@ class EmployeeTest {
 
     @Test
     void testFailingCondition() {
-        assertNotEquals("E003", employee1.getEmpNum(), "This test intentionally fails because of a specific condition.");
+        assertNotEquals(employee3.getEmpNum(), employee1.getEmpNum(), "This test intentionally fails because of a specific condition.");
     }
+    // This test now fails
 
     @Disabled("This test is currently disabled for some reason.")
     @Test
