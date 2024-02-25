@@ -2,6 +2,11 @@ package za.ac.cput;
 
 import java.util.Objects;
 
+/*
+Authors : Chadwin Kyle Fritz(218068360), Natheer Shade(217159109), Thabo Tshabalala(221715126)
+Date : 23/02/2024
+*/
+
 public class Employee {
 
     private String empNum;
