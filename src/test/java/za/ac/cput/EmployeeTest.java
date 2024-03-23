@@ -55,20 +55,22 @@ class EmployeeTest {
     @Test
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
     public void nonStopRunTime(){
-        //I don't know what to call here.
+        double emp = employee1.getSalary() * 10 + 100000;
     }
 
     @Test
     void testFailingCondition() {
-        assertNotEquals(employee3.getEmpNum(), employee1.getEmpNum(), "This test intentionally fails because of a specific condition.");
+        assertNotEquals(employee3.getEmpNum(), employee1.getEmpNum()
+                , "This test intentionally fails because of a specific condition.");
     }
-    // This test now fails
+    // This fails
 
     @Disabled("This test is currently disabled for some reason.")
     @Test
     void testDisabledCondition() {
-        // Test code is currently disabled
+        assertNull(employee3);
     }
+    // Test code is disabled
 
     @Test
     void testToString() {
